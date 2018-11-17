@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+     body
+     {
+         box-sizing: border-box;
+         background-color: rgb(139, 31, 31);
+         display: flex;
+         justify-content: center;
+     }
+    section
+    {
+        display: grid;
+       
+    }
+    nav
+    {
+        
+      
+      
+    }
+    nav.active
+    {
+        top:4%;
+    }
+    nav ul
+    {
+     
+        display: grid;
+       grid-gap: 20px;
+       padding: 0;
+       list-style: none;
+      grid-template-columns: repeat(4, 1fr);
+      box-shadow:  0 1px 5px rgba(104, 104, 104, 0.8);
+      
+
+    }
+    nav ul a
+    {
+        background-color: aqua;
+        display: block;
+        padding: 0.8rem;
+       
+    }
+    span i
+    {
+        font-size: 70px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transition: 0.4s linear;
+    }
+    span i.active
+    {
+        top:10vh;
+    }
+    
+   
+
+
+    </style>
+</head>
+<body>
+    <span><i class="fas fa-angle-double-down"></i></span>
+    <section>
+      <nav>
+          <ul>
+              <li><a href=#>Home</a></li>
+          
+        
+                <li><a href=#>Home</a></li>
+          
+           
+                    <li><a href=#>Home</a></li>
+               
+               
+                        <li><a href=#>Home</a></li>
+                    </ul>
+      </nav>
+    </section>
+    <script>
+    const navBar=document.querySelector('span');
+
+    const scrl=()=>
+    {
+        document.querySelector('nav').classList.toggle('active');
+        document.querySelector('span i').classList.toggle('active');
+
+    }
+
+
+    navBar.addEventListener('click', scrl);
+    
+    
+    </script>
+</body>
+</html>
